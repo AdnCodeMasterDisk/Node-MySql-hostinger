@@ -1,0 +1,18 @@
+<div class="container mt-3">
+    <h3>Enter your tasks here</h3>
+    <div class="mb-3">
+      <form method="POST" action="/" class="d-flex">
+         <input placeholder="Task Name" class="form-control" type="text" name="task" id="task" required>
+         <button class="btn btn-primary" type="submit" id="submit">Add Task</button>
+      </form>
+   </div>    
+
+    <div class="container">
+      <% items.forEach(item => { %>
+         <div class="alert alert-info d-flex justify-content-between align-items-center" role="alert">
+           <p><%= item.task %></p>
+           <a href="<%= item.task_id %>" >del</a>
+         </div>
+      <% }) %>
+    </div>
+ </div>
